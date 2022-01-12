@@ -14,3 +14,6 @@ exports.div = (num1, num2) => {
     if (num2 === 0) return NaN.toString();
     return (num1 / num2).toString();
 }
+exports.pow = (num1, num2) => {
+    return (num1 ** num2).toString();
+}

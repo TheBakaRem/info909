@@ -16,4 +16,10 @@ describe('Tests unitaire', () => {
     it('should return NaN', () => {
         assert.equal(div(6, 0), 'NaN');
     });
+    it('should return 27', () => {
+        assert.equal(pow(3, 3), '27');
+    });
+    it('should return 64', () => {
+        assert.equal(pow(2, 6), '64');
+    });
 });
