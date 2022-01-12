@@ -1,5 +1,5 @@
 const express = require('express');
-const { sub, mul, add, div } = require("./functions");
+const { sub, mul, add, div, pow } = require("./functions");
 
 // Constants
 const PORT = 8080;
@@ -39,6 +39,13 @@ app.post('/div', (req, res) => {
   var num1 = parseFloat(req.body.num1);
   var num2 = parseFloat(req.body.num2);
   var total = div(num1, num2);
+  return res.status(200).send(total);
+})
+
+app.post('/pow', (req, res) => {
+  var num1 = parseFloat(req.body.num1);
+  var num2 = parseFloat(req.body.num2);
+  var total = pow(num1, num2);
   return res.status(200).send(total);
 })
 
